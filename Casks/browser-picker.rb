@@ -1,13 +1,13 @@
 cask "browser-picker" do
-  version "21.0.12"
+  version "21.0.13"
 
   on_arm do
-    sha256 "cfea88884b39ee17c908cfa8d9cbef11e9c9ccca7bebe5e685ca0eae822ee099"
+    sha256 "5da069a81692605033da1876d0d32452007ec154ca228ee9db590f6ca8f34e8f"
     url "https://github.com/antonsacred/browser-picker/releases/download/v#{version}/browser-picker-darwin-arm64-#{version}.zip"
   end
 
   on_intel do
-    sha256 "738f8e1547a3985e89a655e3c58cbe35cbcb6234224746642c90c24d269e4287"
+    sha256 "bceb985b66ec23f30250a7f0d731fa930b393fd8626987f595474c624c2016ba"
     url "https://github.com/antonsacred/browser-picker/releases/download/v#{version}/browser-picker-darwin-x64-#{version}.zip"
   end
 
@@ -15,7 +15,6 @@ cask "browser-picker" do
   desc "Browser prompter for macOS"
   homepage "https://github.com/antonsacred/browser-picker"
 
-  auto_updates true
   depends_on macos: :monterey
 
   app "browser-picker.app"
