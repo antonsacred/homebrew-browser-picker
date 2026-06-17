@@ -1,13 +1,13 @@
 cask "browser-picker" do
-  version "21.0.10"
+  version "21.0.11"
 
   on_arm do
-    sha256 "82f1f00347999cfc1d72207ffdde3ae5f11dc87009b98874e2a9c561fa99b980"
+    sha256 "0ab94d26df413741e2023f5ec5bab58a2a7259aee307109dd6dc8b3181bcabf0"
     url "https://github.com/antonsacred/browser-picker/releases/download/v#{version}/browser-picker-darwin-arm64-#{version}.zip"
   end
 
   on_intel do
-    sha256 "70a7c0489a3695e880b589230144cb40610e1f15da891faa14bb6f5381d42426"
+    sha256 "c7dfa2eec28fb9c6c592e56bb4d05909cacafbf869116f4065ae4f384b8fe948"
     url "https://github.com/antonsacred/browser-picker/releases/download/v#{version}/browser-picker-darwin-x64-#{version}.zip"
   end
 
