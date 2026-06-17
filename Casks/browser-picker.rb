@@ -1,24 +1,30 @@
 cask "browser-picker" do
-  arch arm: "arm64", intel: "x64"
+  version "21.0.7"
 
-  version "1.0.9"
-  sha256 arm: :no_check, intel: :no_check
+  on_arm do
+    sha256 "3b3c649bed6096f1c80cd19b8887545056cf671215bf41762056bbbd96b5fa7c"
+    url "https://github.com/antonsacred/browser-picker/releases/download/v#{version}/Browserosaurus-darwin-arm64-#{version}.zip"
+  end
 
-  url "https://github.com/antonsacred/browser-picker/releases/download/v#{version}/BrowserPicker-#{version}-#{arch}.zip"
-  name "Browser Picker"
-  desc "Menu bar default-browser router with per-profile routing rules"
+  on_intel do
+    sha256 "879d4f4d5718d6ebff3105b20d8cf5dc2d016463477228126aebfe2c3a02a099"
+    url "https://github.com/antonsacred/browser-picker/releases/download/v#{version}/Browserosaurus-darwin-x64-#{version}.zip"
+  end
+
+  name "Browserosaurus"
+  desc "Browser prompter for macOS"
   homepage "https://github.com/antonsacred/browser-picker"
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: ">= :monterey"
 
-  app "BrowserPicker.app"
+  app "Browserosaurus.app"
 
-  uninstall quit: "com.browserpicker.app"
+  uninstall quit: "com.browserosaurus"
 
   zap trash: [
-    "~/Library/Application Support/BrowserPicker",
-    "~/Library/Preferences/com.browserpicker.app.plist",
-    "~/Library/Caches/com.browserpicker.app",
+    "~/Library/Application Support/Browserosaurus",
+    "~/Library/Preferences/com.browserosaurus.plist",
+    "~/Library/Saved Application State/com.browserosaurus.savedState",
   ]
 end
